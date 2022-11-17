@@ -1,0 +1,275 @@
+{
+	"info": {
+		"_postman_id": "f4237b30-692e-4f76-b92d-c6cdea233c1e",
+		"name": "Pruebas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24466671"
+	},
+	"item": [
+		{
+			"name": "LoginCorrecto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nick",
+							"value": "jose",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "user",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/PeliculasCastillejo/LoginServlet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"PeliculasCastillejo",
+						"LoginServlet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LoginIncorrecto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nick",
+							"value": "jose",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "mal",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/PeliculasCastillejo/LoginServlet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"PeliculasCastillejo",
+						"LoginServlet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Error al crear usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nick",
+							"value": "jose",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "mal",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/PeliculasCastillejo/LoginServlet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"PeliculasCastillejo",
+						"LoginServlet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ArticuloAñadido",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "nuevo",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "entretenida",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "8",
+							"type": "text"
+						},
+						{
+							"key": "category",
+							"value": "War",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/PeliculasCastillejo/AddElementServlet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"PeliculasCastillejo",
+						"AddElementServlet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Articulo con categoria inexistente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "nuevo",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "entretenida",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "8",
+							"type": "text"
+						},
+						{
+							"key": "category",
+							"value": "War",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/PeliculasCastillejo/AddElementServlet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"PeliculasCastillejo",
+						"AddElementServlet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login con espacios",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nick",
+							"value": "jose  ",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "user   ",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/PeliculasCastillejo/LoginServlet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"PeliculasCastillejo",
+						"LoginServlet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login con contraseña correcta pero con diferente nick",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nick",
+							"value": "jose  ",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "user   ",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/PeliculasCastillejo/LoginServlet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"PeliculasCastillejo",
+						"LoginServlet"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

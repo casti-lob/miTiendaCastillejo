@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<form action="../UserServlet" method="post">
+		<div align="center">
+		<h2>Peliculas Castillejo</h2>
+		<table>
+			<tr>
+				<td>
+					Password:
+				</td>
+				<td>
+					<input type="password" name="password" required="required">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Nombre completo:
+				</td>
+				<td>
+					<input type="text" name="name" required="required">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Nick:
+				</td>
+				<td>
+					<input type="text" name="nick" required="required">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Año de nacimiento:
+				</td>
+				<td>
+					<input type="date" name="date" required="required">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Genero:
+				</td>
+				<td>
+					<select name="gender">
+						<optgroup label="Gender">
+							<option>Femenino</option>
+							<option>Masculino</option>
+						</optgroup>
+					</select>
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					<button>Crear Usuario</button>
+				</td>
+				
+			</tr>
+			<tr>
+				<td>
+					<a href="Index.html">Atras</a>
+				</td>
+			</tr>
+		</table>
+		</div>
+	</form>
+	
+</body>
+</html>
