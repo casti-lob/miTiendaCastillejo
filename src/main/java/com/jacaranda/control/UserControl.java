@@ -1,7 +1,11 @@
-package com.jacaranda;
+package com.jacaranda.control;
 
 
 import org.hibernate.query.Query;
+
+import com.jacaranda.ConnectionDAO;
+import com.jacaranda.Users;
+
 import org.hibernate.Session;
 
 public class UserControl {

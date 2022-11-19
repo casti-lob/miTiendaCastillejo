@@ -1,4 +1,4 @@
-package com.jacaranda;
+package com.jacaranda.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -13,6 +13,12 @@ import javax.servlet.http.HttpSession;
 
 import org.apache.commons.codec.digest.DigestUtils;
 import org.hibernate.Session;
+
+import com.jacaranda.ConnectionDAO;
+import com.jacaranda.Element;
+import com.jacaranda.Users;
+import com.jacaranda.control.ElementControl;
+import com.jacaranda.control.UserControl;
 
 /**
  * Servlet implementation class LoginServlet
@@ -61,7 +67,7 @@ public class LoginServlet extends HttpServlet {
 				//Bienvenida al usuario
 				out.println("<h1>Bienvenido "+user.getName()+" </h1>");
 				out.println("<h1>Lista de articulos   <a href='/miTiendaCastillejo/html/AddElement.html'>Anadir articulo</a>");
-				out.println("<a href='/miTiendaCastillejo/html/Index.html'>Atras</a>");
+				out.println("<a href='html/Index.html'>Atras</a>");
 				//Tabla de art�culos
 				
 				out.println("<table border=\"1px\">\r\n"
@@ -87,13 +93,13 @@ public class LoginServlet extends HttpServlet {
 					
 				}
 				out.println("</table>");
-				out.println("<a href='/miTiendaCastillejo/html/Index.html'>Atras</a>");
+				
 				out.println("</body></html>");
 			}else{
 				PrintWriter out = response.getWriter();
 				out.println("<html><body>");
 				out.println("<h1>Error al loguearte</h1>");
-				out.println("<a href='/miTiendaCastillejo/html/Index.html'>Atras</a>");
+				out.println("<a href='html/Index.html'>Atras</a>");
 				out.println("</body></html>");
 			}
 	}

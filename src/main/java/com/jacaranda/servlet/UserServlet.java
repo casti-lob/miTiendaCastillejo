@@ -1,4 +1,4 @@
-package com.jacaranda;
+package com.jacaranda.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -10,6 +10,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.codec.digest.DigestUtils;
+
+import com.jacaranda.UserException;
+import com.jacaranda.Users;
+import com.jacaranda.control.UserControl;
 /**
  * Servlet implementation class UserServlet
  */
@@ -64,14 +68,14 @@ public class UserServlet extends HttpServlet {
 				out.println("<html><body>");
 				out.println("<h1>Usuario creado </h1>");
 				out.println("<h1>Bienvenido </h1>");
-				out.println("<a href='miTiendaCastillejo/html/Index.html'>Atras</a>");
+				out.println("<a href='html/Index.html'>Atras</a>");
 				out.println("</body></html>");
 			}else {
 				PrintWriter out = response.getWriter();
 				out.println("<html><body>");
 				out.println("<h1>Error nick de usuario ya existente </h1>");
 
-				out.println("<a href='/miTiendaCastillejo/html/Index.html'>Atras</a>");
+				out.println("<a href='html/Index.html'>Atras</a>");
 				out.println("</body></html>");
 			}
 			

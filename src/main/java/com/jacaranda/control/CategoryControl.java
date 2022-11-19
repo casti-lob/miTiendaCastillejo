@@ -1,9 +1,12 @@
-package com.jacaranda;
+package com.jacaranda.control;
 
 import java.util.List;
 
 import org.hibernate.Session;
 import org.hibernate.query.Query;
+
+import com.jacaranda.Category;
+import com.jacaranda.ConnectionDAO;
 
 public class CategoryControl {
 	

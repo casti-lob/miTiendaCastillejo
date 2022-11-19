@@ -1,9 +1,12 @@
-package com.jacaranda;
+package com.jacaranda.control;
 
 import java.util.List;
 
 import org.hibernate.Session;
 import org.hibernate.query.Query;
+
+import com.jacaranda.ConnectionDAO;
+import com.jacaranda.Element;
 
 public class ElementControl {
 	

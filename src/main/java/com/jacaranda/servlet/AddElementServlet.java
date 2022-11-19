@@ -1,4 +1,4 @@
-package com.jacaranda;
+package com.jacaranda.servlet;
 
 import java.io.File;
 import java.io.IOException;
@@ -15,6 +15,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
+
+import com.jacaranda.Category;
+import com.jacaranda.Element;
+import com.jacaranda.ElementException;
+import com.jacaranda.control.CategoryControl;
+import com.jacaranda.control.ElementControl;
 
 @WebServlet("/AddElementServlet")
 public class AddElementServlet extends HttpServlet {
