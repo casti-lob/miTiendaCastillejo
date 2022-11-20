@@ -63,7 +63,9 @@ public class LoginServlet extends HttpServlet {
 				sesion.setAttribute("login","true");
 				sesion.setAttribute("user",user.getName());
 				PrintWriter out = response.getWriter();
-				out.println("<html><body>");
+				 
+				
+				out.println("<html><body> <div class='card' align='center'>");
 				//Bienvenida al usuario
 				out.println("<h1>Bienvenido "+user.getName()+" </h1>");
 				out.println("<h1>Lista de articulos   <a href='/miTiendaCastillejo/html/AddElement.html'>Anadir articulo</a>");
@@ -94,7 +96,7 @@ public class LoginServlet extends HttpServlet {
 				}
 				out.println("</table>");
 				
-				out.println("</body></html>");
+				out.println("</div></body></html>");
 			}else{
 				PrintWriter out = response.getWriter();
 				out.println("<html><body>");
