@@ -68,7 +68,7 @@ public class LoginServlet extends HttpServlet {
 				out.println("<html><body> <div class='card' align='center'>");
 				//Bienvenida al usuario
 				out.println("<h1>Bienvenido "+user.getName()+" </h1>");
-				out.println("<h1>Lista de articulos   <a href='/miTiendaCastillejo/html/AddElement.html'>Anadir articulo</a>");
+				out.println("<h1>Lista de articulos   <a href='html/AddElement.html'>Anadir articulo</a>");
 				out.println("<a href='html/Index.html'>Atras</a>");
 				//Tabla de art�culos
 				
@@ -83,15 +83,17 @@ public class LoginServlet extends HttpServlet {
 						+ "        <td>\r\n"
 						+ "            Precio\r\n"
 						+ "        </td>\r\n"
-						+ "        \r\n"
+						+ "        <td>Cantidad</td>\r\n"
+						+"			<td>Add</td></tr>"
 						        );
 				
 				List<Element> element = ElementControl.getListElement();
 				for(Element i: element) {
 					out.println("<tr><td>"+i.getName_ele()+"</td>\r\n"
 							+ "<td>"+i.getDescription_ele()+"</td>\r\n"
-							+ "<td>"+i.getPrice()+"</td></tr>");
-							
+							+ "<td>"+i.getPrice()+"</td>");
+					out.println("<td><input type='number' placeholder='cantidad' min='1'></td>");
+					out.println("<td><button>Add Card</button></td></tr>");		
 					
 				}
 				out.println("</table>");
