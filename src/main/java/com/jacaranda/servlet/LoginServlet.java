@@ -67,6 +67,7 @@ public class LoginServlet extends HttpServlet {
 				
 				out.println("<html><body> <div class='card' align='center'>");
 				//Bienvenida al usuario
+				out.println("<form method='post' action='ShopServlet'>");
 				out.println("<h1>Bienvenido "+user.getName()+" </h1>");
 				out.println("<h1>Lista de articulos   <a href='html/AddElement.html'>Anadir articulo</a>");
 				out.println("<a href='html/Index.html'>Atras</a>");
@@ -92,14 +93,16 @@ public class LoginServlet extends HttpServlet {
 					out.println("<tr><td>"+i.getName_ele()+"</td>\r\n"
 							+ "<td>"+i.getDescription_ele()+"</td>\r\n"
 							+ "<td>"+i.getPrice()+"</td>");
+					out.println("<td ><input  name='id' value='"+i.getCode_ele()+"'></td>");
+					out.println("<td ><button>Add Card</button></td></tr>");
 					
-					out.println("<td><form method='post' action=ShopServlet></td>");	
-					out.println("<td hidden='true'> <input name='id' value='"+i.getCode_ele()+"'><td>");
-					out.println("<td><button>Add Card</button></from></td></tr>");		
+					/*out.println("<td><form method='post' action=ShopServlet></td>");	
+					out.println("<td hidden='true'> <input name='id' value='"+i.getCode_ele()+"'></td>");
+					out.println("<td><button>Add Card</button></from></td></tr>");	*/	
 					
 				}
 				out.println("</table>");
-				
+				out.println("</form>");
 				out.println("</div></body></html>");
 			}else{
 				PrintWriter out = response.getWriter();
