@@ -83,7 +83,7 @@ public class LoginServlet extends HttpServlet {
 						+ "        <td>\r\n"
 						+ "            Precio\r\n"
 						+ "        </td>\r\n"
-						+ "        <td>Cantidad</td>\r\n"
+						
 						+"			<td>Add</td></tr>"
 						        );
 				
@@ -92,8 +92,10 @@ public class LoginServlet extends HttpServlet {
 					out.println("<tr><td>"+i.getName_ele()+"</td>\r\n"
 							+ "<td>"+i.getDescription_ele()+"</td>\r\n"
 							+ "<td>"+i.getPrice()+"</td>");
-					out.println("<td><input type='number' placeholder='cantidad' min='1'></td>");
-					out.println("<td><button>Add Card</button></td></tr>");		
+					
+					out.println("<td><form method='post' action=ShopServlet></td>");	
+					out.println("<td hidden='true'> <input name='id' value='"+i.getCode_ele()+"'><td>");
+					out.println("<td><button>Add Card</button></from></td></tr>");		
 					
 				}
 				out.println("</table>");

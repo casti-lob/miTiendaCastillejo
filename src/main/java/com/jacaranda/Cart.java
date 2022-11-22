@@ -10,13 +10,20 @@ import javax.persistence.ManyToOne;
 @Entity(name="PRODUCT")
 public class Cart {
 	@Id
+	private String nick;
 	@ManyToOne
 	@JoinColumn(name="nick")
-	private String nick;
+	
+	@Id 
 	private int code_ele;
+	@ManyToOne
+	
+	@Id
+	private LocalDate dateBuy;
+	
 	private int number;
 	private double price;
-	private LocalDate dateBuy;
+	
 	
 	
 	
