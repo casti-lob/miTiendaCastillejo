@@ -4,11 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Sales {
-	private List<Element> mysales;
+	private List<Element> mysales = new ArrayList<>();
 
 	public Sales() {
-		super();
-		this.mysales=new ArrayList<Element>();
+		
 	}
 
 	public List<Element> getMysales() {
