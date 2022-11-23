@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.jacaranda.Element;
+import com.jacaranda.Sales;
 import com.jacaranda.control.ElementControl;
 
 /**
@@ -34,9 +35,11 @@ public class ShopServlet extends HttpServlet {
 		
 		int id = Integer.parseInt(request.getParameter("id"));
 		Element e = ElementControl.getElement(id);
-		PrintWriter out = response.getWriter();
-		out.println(e.getName_ele());
-		out.println(e.getCode_ele());
+		
+		Sales sales = new Sales();
+		
+		sales.setMysales(e);
+		response.sendRedirect("LoginServlet");
 	}
 
 }

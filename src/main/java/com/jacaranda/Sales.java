@@ -1,21 +1,22 @@
 package com.jacaranda;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Sales {
-	private List<Sales> mysales;
+	private List<Element> mysales;
 
-	public Sales(List<Sales> mysales) {
+	public Sales() {
 		super();
-		this.mysales = mysales;
+		this.mysales=new ArrayList<Element>();
 	}
 
-	public List<Sales> getMysales() {
+	public List<Element> getMysales() {
 		return mysales;
 	}
 
-	public void setMysales(Sales mysales) {
-		this.mysales.add(mysales) ;
+	public void setMysales(Element mysales) {
+		this.mysales.add(mysales);
 	}
 	
 }
