@@ -1,23 +1,37 @@
 package com.jacaranda;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Objects;
 
-public class CartId {
-	private String nick;
-	private int code_ele;
+public class CartId implements Serializable{
+	private String user;
+	private int element;
 	private LocalDate dateBuy;
+	
+	
+	public CartId() {
+		super();
+	}
+	
+	public CartId(String nick, int code_ele, LocalDate dateBuy) {
+		super();
+		this.user = nick;
+		this.element = code_ele;
+		this.dateBuy = dateBuy;
+	}
+
 	public String getNick() {
-		return nick;
+		return user;
 	}
 	public void setNick(String nick) {
-		this.nick = nick;
+		this.user = nick;
 	}
 	public int getCode_ele() {
-		return code_ele;
+		return element;
 	}
 	public void setCode_ele(int code_ele) {
-		this.code_ele = code_ele;
+		this.element = code_ele;
 	}
 	public LocalDate getDateBuy() {
 		return dateBuy;
@@ -30,7 +44,7 @@ public class CartId {
 	}
 	@Override
 	public int hashCode() {
-		return Objects.hash(code_ele, dateBuy, nick);
+		return Objects.hash(element, dateBuy, user);
 	}
 	@Override
 	public boolean equals(Object obj) {
@@ -41,7 +55,7 @@ public class CartId {
 		if (getClass() != obj.getClass())
 			return false;
 		CartId other = (CartId) obj;
-		return code_ele == other.code_ele && Objects.equals(dateBuy, other.dateBuy) && Objects.equals(nick, other.nick);
+		return element == other.element && Objects.equals(dateBuy, other.dateBuy) && Objects.equals(user, other.user);
 	}
 	
 	

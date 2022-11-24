@@ -38,6 +38,7 @@ public class ShopServlet extends HttpServlet {
 		
 		Sales sales = new Sales();
 		
+		
 		sales.setMysales(e);
 		response.sendRedirect("LoginServlet");
 	}

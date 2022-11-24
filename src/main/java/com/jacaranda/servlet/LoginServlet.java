@@ -14,6 +14,7 @@ import javax.servlet.http.HttpSession;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.hibernate.Session;
 
+import com.jacaranda.Cart;
 import com.jacaranda.ConnectionDAO;
 import com.jacaranda.Element;
 import com.jacaranda.Users;
@@ -109,6 +110,8 @@ public class LoginServlet extends HttpServlet {
 				HttpSession sesion = request.getSession();
 				sesion.setAttribute("login","true");
 				sesion.setAttribute("user",user.getName());
+				Cart cart = new Cart();
+				sesion.setAttribute("cart", cart);
 				PrintWriter out = response.getWriter();
 				 
 				

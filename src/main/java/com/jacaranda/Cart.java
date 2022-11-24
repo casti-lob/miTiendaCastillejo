@@ -38,6 +38,12 @@ public class Cart {
 		this.number = number;
 		this.price = price;
 	}
+	
+	
+	public Cart() {
+		super();
+	}
+
 
 	public Users getUser() {
 		return user;
