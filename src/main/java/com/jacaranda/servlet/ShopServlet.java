@@ -8,7 +8,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
+import com.jacaranda.Cart;
 import com.jacaranda.Element;
 import com.jacaranda.Sales;
 import com.jacaranda.control.ElementControl;
@@ -32,6 +34,12 @@ public class ShopServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		HttpSession sessionsa = request.getSession();
+		String login = (String) sessionsa.getAttribute("login");
+		String nick = (String) sessionsa.getAttribute("user");
+		Cart cart = (Cart) sessionsa.getAttribute("cart");
+		
 		
 		int id = Integer.parseInt(request.getParameter("id"));
 		Element e = ElementControl.getElement(id);
